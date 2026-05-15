@@ -3,44 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelly Passy 16 - Catalogue Luxe</title>
+    <title>Kelly Passy 16</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #D4AF37; --black: #1a1a1a; --white: #ffffff; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; background-color: var(--white); color: var(--black); padding-bottom: 90px; }
-        
-        header { text-align: center; padding: 50px 20px; border-bottom: 1px solid #f2f2f2; }
-        h1 { font-weight: 200; letter-spacing: 5px; text-transform: uppercase; margin: 0; font-size: 1.8em; }
-        .location { color: var(--gold); font-size: 0.8em; letter-spacing: 2px; margin-top: 10px; text-transform: uppercase; }
-
-        /* Grille des produits */
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; padding: 10px; }
-        .item { position: relative; aspect-ratio: 1 / 1; background: #fafafa; overflow: hidden; }
-        .item img { width: 100%; height: 100%; object-fit: cover; }
-
-        /* Barre de contact fixe */
-        .nav-contact { position: fixed; bottom: 0; left: 0; right: 0; display: flex; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-top: 1px solid #eee; padding: 15px; gap: 10px; z-index: 1000; }
-        .btn { flex: 1; text-align: center; padding: 14px; text-decoration: none; border-radius: 2px; font-weight: 500; font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; }
-        .btn-black { background: var(--black); color: white; }
-        .btn-whatsapp { background: #25D366; color: white; }
+        body { font-family: 'Inter', sans-serif; }
+        h1 { font-family: 'Playfair Display', serif; }
+        .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 8px; }
+        @media (min-width: 768px) { .product-grid { grid-template-columns: repeat(3, 1fr); gap: 15px; padding: 15px; } }
     </style>
 </head>
-<body>
+<body class="bg-white">
 
-<header>
-    <h1>Kelly Passy 16</h1>
-    <div class="location">Paris XVI — Sélection Exclusive</div>
-</header>
+    <header class="py-12 px-6 text-center border-b border-gray-50">
+        <h1 class="text-3xl tracking-[0.2em] uppercase mb-2">Kelly Passy 16</h1>
+        <p class="text-[10px] tracking-[0.4em] text-gray-400 uppercase">Dépôt-Vente de Luxe • Paris XVI</p>
+    </header>
 
-<div class="grid">
-    <div class="item"><img src="https://via.placeholder.com/600/000/fff?text=Kelly+Item+1" alt="Luxe"></div>
-    <div class="item"><img src="https://via.placeholder.com/600/000/fff?text=Kelly+Item+2" alt="Luxe"></div>
-    <div class="item"><img src="https://via.placeholder.com/600/000/fff?text=Kelly+Item+3" alt="Luxe"></div>
-</div>
+    <main class="max-w-6xl mx-auto">
+        <div class="product-grid">
+            
+            <div class="aspect-square bg-gray-100 overflow-hidden">
+                <img src="images/photo1.jpg" alt="Article Luxe" class="w-full h-full object-cover">
+            </div>
 
-<div class="nav-contact">
-    <a href="tel:01XXXXXX" class="btn btn-black">Appeler</a>
-    <a href="https://wa.me/336XXXXXXXX" class="btn btn-whatsapp">WhatsApp</a>
-</div>
+            <div class="aspect-square bg-gray-100 overflow-hidden">
+                <img src="images/photo2.jpg" alt="Article Luxe" class="w-full h-full object-cover">
+            </div>
+
+            <div class="aspect-square bg-gray-100 overflow-hidden">
+                <img src="images/photo3.jpg" alt="Article Luxe" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-100 overflow-hidden">
+                <img src="images/photo4.jpg" alt="Article Luxe" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-100 overflow-hidden">
+                <img src="images/photo5.jpg" alt="Article Luxe" class="w-full h-full object-cover">
+            </div>
+            <div class="aspect-square bg-gray-100 overflow-hidden">
+                <img src="images/photo6.jpg" alt="Article Luxe" class="w-full h-full object-cover">
+            </div>
+
+        </div>
+    </main>
+
+    <nav class="fixed bottom-6 left-6 right-6 flex gap-3 z-50">
+        <a href="tel:+33627633337" class="flex-1 bg-black text-white text-center py-4 rounded-sm text-[10px] tracking-widest uppercase font-bold shadow-2xl">Appeler la boutique</a>
+        <a href="https://wa.me/33627633337" class="flex-1 bg-[#25D366] text-white text-center py-4 rounded-sm text-[10px] tracking-widest uppercase font-bold shadow-2xl">WhatsApp</a>
+    </nav>
 
 </body>
 </html>
