@@ -3,47 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chez Kelly Rue de Passy 75016 Paris</title>
+    <title>Ben Kids Passy 75016 Paris</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1 { font-family: 'Playfair Display', serif; }
-        .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 8px; }
-        @media (min-width: 768px) { .product-grid { grid-template-columns: repeat(3, 1fr); gap: 15px; padding: 15px; } }
+        :root {
+            --bg-principal: #0a0a0a;
+            --bg-surface: #121212;
+            --texte-principal: #ffffff;
+            --texte-secondaire: #b3b3b3;
+            --accent-or: #c5a880;
+            --bordure-subtile: rgba(255, 255, 255, 0.08);
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg-principal);
+            color: var(--texte-secondaire);
+        }
+        
+        h1, h2, h3 { 
+            font-family: 'Playfair Display', serif; 
+            color: var(--texte-principal);
+        }
+
+        .product-grid { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 2rem; }
+        @media (min-width: 768px) { .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
     </style>
 </head>
-<body class="bg-white">
+<body class="antialiased"></body>
 
-    <header class="py-12 px-6 text-center border-b border-gray-50">
-        <h1 class="text-3xl tracking-[0.2em] uppercase mb-2">Chez Kelly Rue de Passy 75016 Paris</h1>
-        <p class="text-[10px] tracking-[0.4em] text-gray-400 uppercase">Sportswear-Pret à porter-Elle & Lui • Paris XVI</p>
+   <header class="py-12 px-6 text-center" style="border-bottom: 1px solid var(--bordure-subtile); background-color: rgba(10, 10, 10, 0.8); backdrop-filter: blur(10px);">
+        <h1 class="text-4xl tracking-[0.25em] uppercase mb-3 text-white">Ben Kids Passy 75016 Paris</h1>
+        <p class="text-[11px] tracking-[0.4em] uppercase" style="color: var(--accent-or);">Chic &amp; Haute Parfumerie — Paris XVI</p>
     </header>
 
-    <main class="max-w-6xl mx-auto">
+<main class="max-w-6xl mx-auto px-6 py-16">
+        <div class="mb-20 p-8 text-center" style="background-color: var(--bg-surface); border: 1px solid var(--bordure-subtile);">
+            <p class="text-xs tracking-[0.3em] uppercase mb-2" style="color: var(--accent-or);">Événement Exceptionnel</p>
+            <h2 class="text-3xl tracking-[0.15em] uppercase text-white mb-3">Soldes d'Été</h2>
+            <p class="text-sm tracking-[0.2em] text-gray-400 uppercase mb-4">Dès le 18 mai en boutique</p>
+            <div class="h-px w-20 mx-auto mb-4" style="background-color: var(--accent-or);"></div>
+            <p class="text-xs text-gray-500 max-w-md mx-auto italic font-light">"Votre style, vos marques." Découvrez une sélection exclusive de pièces de créateurs pour réinventer votre vestiaire de saison au Ben K Concept Store.</p>
+        </div>
+
+        <h2 class="text-2xl tracking-[0.2em] uppercase text-center mb-12 text-white font-light">La Collection Prêt-à-Porter</h2>
+        
         <div class="product-grid">
-            
-            <div class="aspect-square bg-gray-100 overflow-hidden">
-                <img src="images/photo1.jpg" alt="Article Luxe" class="w-full h-full object-cover">
+            <div class="p-6 transition-all duration-500" style="background-color: var(--bg-surface); border: 1px solid var(--bordure-subtile);">
+                <div class="overflow-hidden mb-4 bg-black aspect-[3/4] flex items-center justify-center">
+                    <img src="images/photo1.jpg" alt="Chemise en lin bleu Le Temps des Cerises" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                </div>
+                <h3 class="text-lg tracking-wide text-white mb-1 font-normal">Chemise en Lin Premium</h3>
+                <p class="text-[11px] tracking-wider uppercase mb-3" style="color: var(--accent-or);">Le Temps des Cerises</p>
+                <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Une coupe fluide et une matière respirante haut de gamme, idéale pour les journées ensoleillées de la capitale.</p>
+                <div class="flex items-center justify-between pt-4" style="border-top: 1px solid var(--bordure-subtile);">
+                    <span class="text-md font-light tracking-widest text-white">69,99 €</span>
+                    <button class="text-[10px] tracking-[0.2em] uppercase py-2 px-3 transition-all duration-300 hover:text-white" style="color: var(--accent-or); border: 1px solid var(--bordure-subtile);">Découvrir</button>
+                </div>
             </div>
 
-            <div class="aspect-square bg-gray-100 overflow-hidden">
-                <img src="images/photo2.jpg" alt="Article Luxe" class="w-full h-full object-cover">
+            <div class="p-6 transition-all duration-500" style="background-color: var(--bg-surface); border: 1px solid var(--bordure-subtile);">
+                <div class="overflow-hidden mb-4 bg-black aspect-[3/4] flex items-center justify-center">
+                    <img src="images/photo2.jpg" alt="T-Shirt col V turquoise" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                </div>
+                <h3 class="text-lg tracking-wide text-white mb-1 font-normal">T-Shirt Col V "Lagoon"</h3>
+                <p class="text-[11px] tracking-wider uppercase mb-3" style="color: var(--accent-or);">Le Temps des Cerises</p>
+                <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Teinte turquoise lumineuse et coton d'une douceur exceptionnelle. Confort absolu et finitions soignées.</p>
+                <div class="flex items-center justify-between pt-4" style="border-top: 1px solid var(--bordure-subtile);">
+                    <span class="text-md font-light tracking-widest text-white">29,99 €</span>
+                    <button class="text-[10px] tracking-[0.2em] uppercase py-2 px-3 transition-all duration-300 hover:text-white" style="color: var(--accent-or); border: 1px solid var(--bordure-subtile);">Découvrir</button>
+                </div>
             </div>
 
-            <div class="aspect-square bg-gray-100 overflow-hidden">
-                <img src="images/photo3.jpg" alt="Article Luxe" class="w-full h-full object-cover">
-            </div>
-            <div class="aspect-square bg-gray-100 overflow-hidden">
-                <img src="images/photo4.jpg" alt="Article Luxe" class="w-full h-full object-cover">
-            </div>
-            <div class="aspect-square bg-gray-100 overflow-hidden">
-                <img src="images/photo5.jpg" alt="Article Luxe" class="w-full h-full object-cover">
-            </div>
-            <div class="aspect-square bg-gray-100 overflow-hidden">
-                <img src="images/photo6.jpg" alt="Article Luxe" class="w-full h-full object-cover">
+            <div class="p-6 transition-all duration-500" style="background-color: var(--bg-surface); border: 1px solid var(--bordure-subtile);">
+                <div class="overflow-hidden mb-4 bg-black aspect-[3/4] flex items-center justify-center">
+                    <img src="images/photo3.jpg" alt="Sweat-shirt manches longues bleu azur" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                </div>
+                <h3 class="text-lg tracking-wide text-white mb-1 font-normal">Sweat Sport Fin "Azur"</h3>
+                <p class="text-[11px] tracking-wider uppercase mb-3" style="color: var(--accent-or);">Le Temps des Cerises</p>
+                <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Un molleton de coton léger teinté dans un bleu azur profond. Idéal pour réchauffer les soirées d'été.</p>
+                <div class="flex items-center justify-between pt-4" style="border-top: 1px solid var(--bordure-subtile);">
+                    <span class="text-md font-light tracking-widest text-white">79,99 €</span>
+                    <button class="text-[10px] tracking-[0.2em] uppercase py-2 px-3 transition-all duration-300 hover:text-white" style="color: var(--accent-or); border: 1px solid var(--bordure-subtile);">Découvrir</button>
+                </div>
             </div>
 
+            <div class="p-6 transition-all duration-500" style="background-color: var(--bg-surface); border: 1px solid var(--bordure-subtile);">
+                <div class="overflow-hidden mb-4 bg-black aspect-[3/4] flex items-center justify-center">
+                    <img src="images/photo4.jpg" alt="T-Shirt col V corail pêche" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                </div>
+                <h3 class="text-lg tracking-wide text-white mb-1 font-normal">T-Shirt Col V "Sunset"</h3>
+                <p class="text-[11px] tracking-wider uppercase mb-3" style="color: var(--accent-or);">Le Temps des Cerises</p>
+                <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Une nuance corail/pêche éclatante qui sublime le teint. Coton premium sélectionné pour sa tenue irréprochable.</p>
+                <div class="flex items-center justify-between pt-4" style="border-top: 1px solid var(--bordure-subtile);">
+                    <span class="text-md font-light tracking-widest text-white">29,99 €</span>
+                    <button class="text-[10px] tracking-[0.2em] uppercase py-2 px-3 transition-all duration-300 hover:text-white" style="color: var(--accent-or); border: 1px solid var(--bordure-subtile);">Découvrir</button>
+                </div>
+            </div>
+
+            <div class="p-6 transition-all duration-500" style="background-color: var(--bg-surface); border: 1px solid var(--bordure-subtile);">
+                <div class="overflow-hidden mb-4 bg-black aspect-[3/4] flex items-center justify-center">
+                    <img src="images/photo5.jpg" alt="Polo écru texturé gaufré" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+                </div>
+                <h3 class="text-lg tracking-wide text-white mb-1 font-normal">Polo Texturé Écru</h3>
+                <p class="text-[11px] tracking-wider uppercase mb-3" style="color: var(--accent-or);">Édition Création Française</p>
+                <p class="text-xs text-gray-400 font-light leading-relaxed mb-6">Maille gaufrée exclusive et nuances crème subtiles pour une silhouette décontractée et résolument chic.</p>
+                <div class="flex items-center justify-between pt-4" style="border-top: 1px solid var(--bordure-subtile);">
+                    <span class="text-md font-light tracking-widest text-white">59,99 €</span>
+                    <button class="text-[10px] tracking-[0.2em] uppercase py-2 px-3 transition-all duration-300 hover:text-white" style="color: var(--accent-or); border: 1px solid var(--bordure-subtile);">Découvrir</button>
+                </div>
+            </div>
         </div>
     </main>
 
